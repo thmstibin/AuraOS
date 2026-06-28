@@ -1,0 +1,20 @@
+.pio/build/auraos/FrameworkArduino/MD5Builder.cpp.o: \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/MD5Builder.cpp \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/HEXBuilder.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/WString.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/pgmspace.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/newlib/platform_include/ctype.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/Stream.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/Print.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/newlib/platform_include/stdio.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/WString.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/Printable.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/MD5Builder.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_system/include/esp_system.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_err.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_compiler.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_attr.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_bit_defs.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_idf_version.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_rom/include/esp_rom_md5.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/HashBuilder.h

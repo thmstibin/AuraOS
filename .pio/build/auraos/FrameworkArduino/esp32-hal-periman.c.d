@@ -1,0 +1,33 @@
+.pio/build/auraos/FrameworkArduino/esp32-hal-periman.c.o: \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-periman.c \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-log.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/qio_opi/include/sdkconfig.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_timer/include/esp_timer.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/newlib/platform_include/stdio.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_err.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_compiler.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_hw_support/include/esp_etm.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/soc/esp32s3/include/soc/soc.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_assert.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_bit_defs.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/soc/esp32s3/register/soc/reg_base.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_rom/include/esp_rom_sys.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/soc/esp32s3/include/soc/reset_reasons.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/soc/esp32s3/include/soc/soc_caps.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_config.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_level.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_color.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_buffer.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_timestamp.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_write.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_format.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_args.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_macros.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_assert.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_log_attr.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/esp_common/include/esp_attr.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/log/include/esp_private/log_attr.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-periman.h \
+ /Users/tibintom/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-ldo.h
