@@ -340,4 +340,4 @@
  lib/Apps/Home/HomeApp.h lib/Widgets/NavigationBar/NavigationBar.h \
  lib/Apps/Settings/SettingsApp.h \
  lib/Core/SettingsManager/SettingsManager.h lib/Widgets/Button/Button.h \
- lib/Core/PowerManager/PowerManager.h
+ lib/Apps/Settings/WiFiApp.h lib/Core/PowerManager/PowerManager.h

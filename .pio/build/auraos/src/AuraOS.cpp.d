@@ -342,4 +342,5 @@
  lib/Widgets/NavigationBar/NavigationBar.h \
  lib/Core/DisplayManager/DisplayManager.h \
  lib/Core/PowerManager/PowerManager.h \
- lib/Core/SettingsManager/SettingsManager.h include/Version.h
+ lib/Core/SettingsManager/SettingsManager.h \
+ lib/Core/WiFiManager/WiFiManager.h include/Version.h

@@ -8,6 +8,7 @@
 #include "AppManager.h"
 #include "PowerManager.h"
 #include "SettingsManager.h"
+#include "WiFiManager.h"
 #include <Arduino.h>
 #include <time.h>
 #include "Version.h"
@@ -60,10 +61,17 @@ void AuraOS::begin() {
     // 6. Remaining subsystems
     Serial.println("[AuraOS] 6. PowerManager...");
     PowerManager::instance().begin();
+
+    // Initialize WiFi (will try to auto-connect to saved network)
+    Serial.println("[AuraOS] 6b. WiFi...");
+    WiFiManager::instance().begin();
+
+    // Set fallback time (Jan 1, 2025 00:00:00 UTC)
+    // Once WiFi connects, NTP will update this to actual time
     time_t epoch = 1735689600;
     struct timeval tv = {epoch, 0};
     settimeofday(&tv, nullptr);
-    Serial.println("[AuraOS] 6. Time set");
+    Serial.println("[AuraOS] 6. Time set (fallback)");
 
     // 7. Navigation & touch wiring (skip Navigation for v0.1, wire directly)
     Serial.println("[AuraOS] 7. Touch routing...");
@@ -97,6 +105,7 @@ void AuraOS::loop() {
 
     TouchManager::instance().update();
     PowerManager::instance().update();
+    WiFiManager::instance().update();  // Check WiFi connection state
     AppManager::instance().update();
     AppManager::instance().draw();
 

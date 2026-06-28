@@ -4,6 +4,7 @@
 #include "Config.h"
 #include "HomeApp.h"
 #include "SettingsApp.h"
+#include "WiFiApp.h"
 #include "AppManager.h"
 #include "PowerManager.h"
 #include <Arduino.h>
@@ -170,6 +171,10 @@ void Launcher::_launchApp(int idx) {
 
         case 1:  // Settings
             AppManager::instance().push(new SettingsApp());
+            break;
+
+        case 2:  // WiFi
+            AppManager::instance().push(new WiFiApp());
             break;
 
         default:  // All others are placeholders
