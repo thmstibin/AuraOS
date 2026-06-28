@@ -1,5 +1,7 @@
 #include "HomeApp.h"
 #include "PowerManager.h"
+#include "AppManager.h"
+#include "Launcher.h"
 #include "Colors.h"
 #include "Config.h"
 #include <time.h>
@@ -80,15 +82,13 @@ void HomeApp::draw() {
 }
 
 bool HomeApp::onTouch(TouchEvent ev, int16_t x, int16_t y) {
-    // Tap to refresh display
-    if (ev == TouchEvent::Tap) {
-        _dirty = true;
-        Serial.printf("[Home] Tap at x=%d y=%d\n", x, y);
+    // Swipe up to open launcher
+    if (ev == TouchEvent::SwipeUp) {
+        AppManager::instance().push(new Launcher());
         return true;
     }
-    // Swipe feedback (v0.2: will open launcher/navigate)
-    if (ev == TouchEvent::SwipeUp || ev == TouchEvent::SwipeDown ||
-        ev == TouchEvent::SwipeLeft || ev == TouchEvent::SwipeRight) {
+    // Tap to refresh display
+    if (ev == TouchEvent::Tap) {
         _dirty = true;
         return true;
     }

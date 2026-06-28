@@ -1,12 +1,10 @@
 #pragma once
 #include "AppManager.h"
-#include "EventManager.h"
 #include "StatusBar.h"
 
 struct AppEntry {
     const char *name;
     void (*iconFn)(Arduino_GFX *, int16_t, int16_t, uint16_t);
-    Event launchEvent;
 };
 
 class Launcher : public BaseApp {
@@ -18,8 +16,8 @@ public:
     void onResume()              override { _dirty = true; }
 
 private:
-    void _drawGrid();
-    void _drawApp(int col, int row, const AppEntry &entry, bool highlighted) const;
+    void _drawApp(int col, int row, int idx, bool highlighted) const;
+    void _launchApp(int idx);
 
     Arduino_GFX *_gfx      = nullptr;
     StatusBar    _statusBar;

@@ -339,5 +339,5 @@
  lib/Core/TouchManager/TouchManager.h lib/Widgets/StatusBar/StatusBar.h \
  include/Config.h include/Colors.h \
  lib/Core/SettingsManager/SettingsManager.h lib/Widgets/Button/Button.h \
- lib/Core/EventManager/EventManager.h \
- lib/Core/PowerManager/PowerManager.h
+ lib/Core/PowerManager/PowerManager.h \
+ lib/Core/DisplayManager/DisplayManager.h

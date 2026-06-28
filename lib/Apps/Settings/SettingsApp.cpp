@@ -1,6 +1,8 @@
 #include "SettingsApp.h"
-#include "EventManager.h"
+#include "AppManager.h"
 #include "PowerManager.h"
+#include "SettingsManager.h"
+#include "DisplayManager.h"
 #include "Colors.h"
 #include "Config.h"
 #include <Arduino.h>
@@ -64,21 +66,36 @@ void SettingsApp::draw() {
 bool SettingsApp::onTouch(TouchEvent ev, int16_t x, int16_t y) {
     if (ev == TouchEvent::Tap) {
         if (_backBtn.contains(x, y)) {
-            EventManager::instance().emit(Event::NavBack);
+            AppManager::instance().pop();
             return true;
         }
-        // Row hit test
+        // Row hit test for brightness slider
         if (x >= ROW_X && x < SCREEN_W - ROW_X) {
             int16_t rel = y - FIRST_Y;
             if (rel >= 0) {
                 int row = rel / ROW_H;
                 auto &s = SettingsManager::instance().settings();
-                switch (row) {
-                    case 1: s.darkMode    = !s.darkMode;    break;
-                    case 2: s.wifiEnabled = !s.wifiEnabled; break;
-                    case 3: s.bleEnabled  = !s.bleEnabled;  break;
-                    default: return false;
+
+                if (row == 0) {
+                    // Brightness: tap right side to increase, left to decrease
+                    int16_t colX = x - ROW_X;
+                    if (colX < (SCREEN_W - ROW_X * 2) / 2) {
+                        s.brightness = constrain(s.brightness - 20, 50, 255);
+                    } else {
+                        s.brightness = constrain(s.brightness + 20, 50, 255);
+                    }
+                    DisplayManager::instance().setBrightness(s.brightness);
+                } else if (row >= 1 && row <= 4) {
+                    // Toggle switches
+                    switch (row) {
+                        case 1: s.darkMode    = !s.darkMode;    break;
+                        case 2: s.wifiEnabled = !s.wifiEnabled; break;
+                        case 3: s.bleEnabled  = !s.bleEnabled;  break;
+                        case 4: s.volume      = (s.volume == 0) ? 60 : 0; break;
+                        default: return false;
+                    }
                 }
+
                 SettingsManager::instance().save();
                 _dirty = true;
                 return true;
@@ -86,7 +103,7 @@ bool SettingsApp::onTouch(TouchEvent ev, int16_t x, int16_t y) {
         }
     }
     if (ev == TouchEvent::SwipeDown) {
-        EventManager::instance().emit(Event::NavBack);
+        AppManager::instance().pop();
         return true;
     }
     return false;

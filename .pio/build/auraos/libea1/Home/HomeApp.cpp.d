@@ -338,4 +338,4 @@
  lib/Core/TouchManager/TouchManager.h lib/Widgets/StatusBar/StatusBar.h \
  include/Config.h include/Colors.h \
  lib/Widgets/NavigationBar/NavigationBar.h \
- lib/Core/PowerManager/PowerManager.h
+ lib/Core/PowerManager/PowerManager.h include/Launcher.h
